@@ -1,0 +1,66 @@
+/* Styling for notes */
+.note {
+    padding: 20px;
+    border-top: 1px solid #ddd;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.note-header {
+    display: flex;
+    align-items: center;
+    padding-left: 30px; 
+}
+
+.note-header h2 {
+    margin: 0 0 0 10px;
+    font-size: 22px;
+    color: #6D6D6D;
+}
+
+.pin-icon {
+    width: 40px;
+    height: 40px;
+    position: absolute; 
+    left: 0; 
+}
+
+.note-footer {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    padding-left: 40px;
+    position: relative;
+}
+
+.note-footer img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.note-footer p {
+    margin: 0;
+    font-size: 14px;
+    color: #a6a6a6;
+}
+
+.note-footer span {
+    margin-left: auto;
+    font-size: 12px;
+    color: #999;
+    margin-right: 60px; 
+}
+
+/* Styling for delete icon */
+.delete-icon {
+    width: 25px; 
+    height: 30px; 
+    cursor: pointer;
+    position: absolute; 
+    right: 10px; 
+}
