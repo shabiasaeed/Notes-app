@@ -9,7 +9,7 @@ main {
 
 /* Styling for background element */
 .ink-element {
-  position: fixed;
+  position: absolute;
   top: 60%;
   left: 15%;
   transform: translateX(-50%);

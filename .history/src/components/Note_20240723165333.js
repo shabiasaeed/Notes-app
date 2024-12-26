@@ -6,7 +6,7 @@ import pinIconLight from '../assets/pin-icon-light.png';
 import deleteIcon from '../assets/delete-icon.png';
 
 //Component to handle the display of the note's section
-const Note = ({ title, author, time, pinned, onDelete}) => {
+const Note = ({ title, author, time, pinned }) => {
   const [isHovered, setIsHovered] = useState(false); //State for checking whether the note is hovered
   const pinIcon = pinned ? pinIconDark : (isHovered ? pinIconLight : ''); // Displaying the pin based on the check of whether the note is hovered and whether it is pinned
 
@@ -15,7 +15,7 @@ const Note = ({ title, author, time, pinned, onDelete}) => {
       <div className={`note-header ${pinned ? '' : 'unpinned'}`}>
         {pinIcon && <img src={pinIcon} alt="Pin" className="pin-icon"/>}
         <h2>{title}</h2>
-        {isHovered && (<img src={deleteIcon} className="delete-icon" onClick={() => onDelete(title)} alt="Delete" />)}
+        {isHovered && <img src={deleteIcon} alt="Delete" className="delete-icon"/>}
       </div>
       <div className="note-footer">
         <img src={userIcon} alt="User" className="user-icon"/>

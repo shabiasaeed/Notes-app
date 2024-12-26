@@ -15,7 +15,7 @@ const Note = ({ title, author, time, pinned, onDelete}) => {
       <div className={`note-header ${pinned ? '' : 'unpinned'}`}>
         {pinIcon && <img src={pinIcon} alt="Pin" className="pin-icon"/>}
         <h2>{title}</h2>
-        {isHovered && (<img src={deleteIcon} className="delete-icon" onClick={() => onDelete(title)} alt="Delete" />)}
+        {isHovered && (<button onClick={() => onDelete(title)} className="delete-icon"><img src={deleteIcon} alt="Delete" /></button>)}
       </div>
       <div className="note-footer">
         <img src={userIcon} alt="User" className="user-icon"/>
