@@ -4,7 +4,7 @@ import searchIcon from '../assets/search-icon.png';
 import addButton from '../assets/add-button.png';
 
 // Component to handle the display of the application's header section
-const Header = ({ setSearchNotes }) => {
+const Header = () => {
   return (
     <header className="header">
       <div className="header-top">
@@ -15,7 +15,7 @@ const Header = ({ setSearchNotes }) => {
       </div>
       <div className="search-bar">
         <img src={searchIcon} alt="Search"/>
-        <input type="text" placeholder="Search through your Notes" className="search-text" onChange={(e) => setSearchNotes(e.target.value)}/>
+        <input type="text" placeholder="Search through your Notes" className="search-text"/>
       </div>
     </header>
   );

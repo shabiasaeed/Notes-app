@@ -44,7 +44,7 @@ function App() {
       <main>
         <img src={backgroundInk} alt="Ink Element" className="ink-element"/>
         {filteredNotes.map((note, index) => (
-          <Note key={index} title={note.title} author={note.author} time={note.time} pinned={note.pinned} onDelete={handleDelete}/>
+          <Note key={index} title={note.title} author={note.author} time={note.time} pinned={note.pinned} onDelete={handleDelete}/> // Prop to use Note Componenet
         ))}
       </main>
     </div>

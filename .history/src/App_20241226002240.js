@@ -36,7 +36,9 @@ function App() {
   const [searchNotes, setSearchNotes] = useState('');
 
   // Filter notes based on search
-  const filteredNotes = notes.filter(note => note.title.toLowerCase().includes(searchNotes.toLowerCase()));
+  const filteredNotes = notes.filter(note =>
+    note.title.toLowerCase().includes(searchNotes.toLowerCase())
+  );
 
   return (
     <div className="App">
@@ -44,7 +46,7 @@ function App() {
       <main>
         <img src={backgroundInk} alt="Ink Element" className="ink-element"/>
         {filteredNotes.map((note, index) => (
-          <Note key={index} title={note.title} author={note.author} time={note.time} pinned={note.pinned} onDelete={handleDelete}/>
+          <Note key={index} title={note.title} author={note.author} time={note.time} pinned={note.pinned} onDelete={handleDelete}/> // Prop to use Note Componenet
         ))}
       </main>
     </div>
