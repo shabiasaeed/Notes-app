@@ -32,9 +32,16 @@ function App() {
     notesList(notes.filter( note => note.title !== title))
   }
 
-  function handlePinToggle(title){
-    notesList(prevNotes => prevNotes.map(note => note.title === title ? { ...note, pinned: !note.pinned } : note));
+    // Handle pinning/unpinning a note
+  function handleDelete(title){
+    setNotes(prevNotes =>
+      prevNotes.map(note =>
+        note.title === title ? { ...note, pinned: !note.pinned } : note
+      )
+    );
   };
+
+
 
   // Search state
   const [searchNotes, setSearchNotes] = useState('');
@@ -42,7 +49,7 @@ function App() {
   // Filter notes based on search
   const filteredNotes = notes.filter(note => note.title.toLowerCase().includes(searchNotes.toLowerCase()));
 
-  // Pinned notes to appear at the top
+  // Sort notes: Pinned notes appear at the top
   const sortedNotes = filteredNotes.sort((a, b) => b.pinned - a.pinned);
 
   return (
@@ -50,7 +57,7 @@ function App() {
       <Header setSearchNotes={setSearchNotes}/>
       <main>
         <img src={backgroundInk} alt="Ink Element" className="ink-element"/>
-        {sortedNotes.map((note, index) => (
+        {filteredNotes.map((note, index) => (
           <Note key={index} title={note.title} author={note.author} time={note.time} pinned={note.pinned} onDelete={handleDelete} onPinToggle={handlePinToggle}/>
         ))}
       </main>

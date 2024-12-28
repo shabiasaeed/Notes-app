@@ -13,7 +13,7 @@ const Note = ({ title, author, time, pinned, onDelete, onPinToggle }) => {
   return (
     <div className="note" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
       <div className={`note-header ${pinned ? '' : 'unpinned'}`}>
-        {pinIcon && <img src={pinIcon} alt="Pin" className="pin-icon" onClick={() => onPinToggle(title)}/>}
+        {pinIcon && <img src={pinIcon} alt="Pin" className="pin-icon"/>}
         <h2>{title}</h2>
         {isHovered && (<img src={deleteIcon} className="delete-icon" onClick={() => onDelete(title)} alt="Delete" />)}
       </div>
