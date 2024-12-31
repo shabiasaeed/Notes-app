@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import './Note.css';
 import userIcon from '../assets/user-icon.png';
+import pinIconDark from '../assets/pin-icon-dark.png';
+import pinIconLight from '../assets/pin-icon-light.png';
 import { FiTrash } from 'react-icons/fi'; 
-import { FaThumbtack } from 'react-icons/fa'; 
-import { TbPinned } from 'react-icons/tb'; 
+import { BiPin, BiPinFill } from 'react-icons/bi';
 
 //Component to handle the display of the note's section
 const Note = ({ title, author, time, pinned, onDelete, onPinToggle }) => {
@@ -13,7 +14,7 @@ const Note = ({ title, author, time, pinned, onDelete, onPinToggle }) => {
   return (
     <div className="note" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
       <div className={`note-header ${pinned ? 'pinned' : 'unpinned'}`}>
-      {pinned ? (<FaThumbtack className="pin-icon" onClick={() => onPinToggle(title)}/>) : (isHovered && (<TbPinned className="pin-icon" onClick={() => onPinToggle(title)}/>))}
+      {pinned ? (<BiPinFill className="pin-icon" onClick={() => onPinToggle(title)}/>) : (isHovered && (<BiPin className="pin-icon" onClick={() => onPinToggle(title)}/>))}
         <h2>{title}</h2>
         {isHovered && (<FiTrash className="delete-icon" onClick={() => onDelete(title)}/>)}
       </div>
