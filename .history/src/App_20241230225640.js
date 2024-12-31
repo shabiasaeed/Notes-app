@@ -55,6 +55,7 @@ function App() {
           <Note key={index} title={note.title} author={note.author} time={note.time} pinned={note.pinned} onDelete={handleDelete} onPinToggle={handlePinToggle}/>
         ))}
       </main>
+      <FaThumbtack />
     </div>
   );
 }

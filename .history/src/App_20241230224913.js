@@ -3,7 +3,7 @@ import Header from './components/Header';
 import Note from './components/Note';
 import './App.css';
 import backgroundInk from './assets/ink-background-element.png';
-import { FaThumbtack } from 'react-icons/fa'
+import { Fatubstack } from 'react-icons'
 
 //Component to handle the rendering of the header and note compnents
 function App() {
@@ -55,6 +55,7 @@ function App() {
           <Note key={index} title={note.title} author={note.author} time={note.time} pinned={note.pinned} onDelete={handleDelete} onPinToggle={handlePinToggle}/>
         ))}
       </main>
+      <Fatubstack />
     </div>
   );
 }

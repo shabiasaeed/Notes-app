@@ -4,7 +4,7 @@ import userIcon from '../assets/user-icon.png';
 import pinIconDark from '../assets/pin-icon-dark.png';
 import pinIconLight from '../assets/pin-icon-light.png';
 import deleteIcon from '../assets/delete-icon.png';
-import { FiTrash } from 'react-icons/fi'; 
+import { FaTrash } from 'react-icons/fa'; // Import the delete icon
 
 //Component to handle the display of the note's section
 const Note = ({ title, author, time, pinned, onDelete, onPinToggle }) => {
@@ -16,7 +16,7 @@ const Note = ({ title, author, time, pinned, onDelete, onPinToggle }) => {
       <div className={`note-header ${pinned ? '' : 'unpinned'}`}>
         {pinIcon && <img src={pinIcon} alt="Pin" className="pin-icon" onClick={() => onPinToggle(title)}/>}
         <h2>{title}</h2>
-        {isHovered && (<FiTrash className="delete-icon" onClick={() => onDelete(title)}/>)}
+        {isHovered && (<FaTrash className="delete-icon" onClick={() => onDelete(title)}/>)}
       </div>
       <div className="note-footer">
         <img src={userIcon} alt="User" className="user-icon"/>

@@ -3,7 +3,6 @@ import Header from './components/Header';
 import Note from './components/Note';
 import './App.css';
 import backgroundInk from './assets/ink-background-element.png';
-import { FaThumbtack } from 'react-icons/fa'
 
 //Component to handle the rendering of the header and note compnents
 function App() {

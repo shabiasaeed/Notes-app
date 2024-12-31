@@ -4,7 +4,7 @@ import userIcon from '../assets/user-icon.png';
 import pinIconDark from '../assets/pin-icon-dark.png';
 import pinIconLight from '../assets/pin-icon-light.png';
 import deleteIcon from '../assets/delete-icon.png';
-import { FiTrash } from 'react-icons/fi'; 
+import { FiTrash } from 'react-icons/fi'; // Import the delete icon
 
 //Component to handle the display of the note's section
 const Note = ({ title, author, time, pinned, onDelete, onPinToggle }) => {
