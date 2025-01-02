@@ -46,7 +46,7 @@ function App() {
   const sortedNotes = filteredNotes.sort((a, b) => b.pinned - a.pinned);
 
   return (
-    <div>
+    <div className="App">
       <Header setSearchNotes={setSearchNotes}/>
       <main className="p-2 relative flex flex-col items-center font-sans">
         <img src={backgroundInk} alt="Ink Element" className="fixed top-2/3 right-2/3 transform -translate-x-1/2 z-[-1] w-26"/>

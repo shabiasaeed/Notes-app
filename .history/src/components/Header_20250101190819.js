@@ -1,4 +1,6 @@
 import React from 'react';
+import './Header.css';
+import addButton from '../assets/add-button.png';
 import { FiSearch } from 'react-icons/fi';
 import { FaPlus } from 'react-icons/fa';
 
@@ -8,7 +10,7 @@ const Header = ({ setSearchNotes }) => {
   return (
     <header className="p-5 bg-white flex flex-col items-center shadow-md">
       <div className="flex items-center justify-between w-full max-w-4xl">
-        <h1 className="text-4xl font-bold text-black">Notes</h1>
+        <h1 className="text-4xl font-bold text-black">My Notes</h1>
         <FaPlus className="w-8 h-8 cursor-pointer"/>
       </div>
       <div className="flex items-center w-full max-w-4xl mt-4">

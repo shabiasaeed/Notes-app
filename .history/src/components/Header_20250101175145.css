@@ -1,5 +1,5 @@
 /* Styling for the header container */
-.header {
+/* .header {
     padding: 20px;
     background-color: #fff;
     width: 100%;
@@ -20,10 +20,10 @@
     font-size: 40px;
     color: #000;
     padding-left: 20px;
-}
+} */
 
 /* Styling for the search feature */
-.search-bar input::placeholder {
+/* .search-bar input::placeholder {
     color: #d3d3d3;
 }
   
@@ -42,10 +42,10 @@
     font-style: italic;
     flex-grow: 1;
     max-width: 800px;
-}
+} */
 
 /* Styling for the add button */
-.add-button {
+/* .add-button {
     background: none;
     border: none;
     cursor: pointer;
@@ -61,4 +61,4 @@
     height: 30px;
     cursor: pointer;
     margin-right: 10px;
-}
+} */

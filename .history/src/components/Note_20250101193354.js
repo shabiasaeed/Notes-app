@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import './Note.css';
+import userIcon from '../assets/user-icon.png';
 import { FiTrash } from 'react-icons/fi'; 
 import { FaThumbtack } from 'react-icons/fa'; 
 import { TbPinned } from 'react-icons/tb'; 
@@ -21,7 +23,7 @@ const Note = ({ title, author, time, pinned, onDelete, onPinToggle }) => {
       <div className="flex items-center gap-2 text-sm text-gray-500 pt-1">
         <TbUserPlus className="w-5 h-5 cursor-pointer" />
         <p>{author}</p>
-        <span className="ml-auto">{time}</span>
+        <span>{time}</span>
       </div>
     </div>
   );

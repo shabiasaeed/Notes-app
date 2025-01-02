@@ -1,5 +1,5 @@
 /* Styling for notes */
-.note {
+/* .note {
     padding: 20px;
     border-top: 1px solid #ddd;
     position: relative;
@@ -55,11 +55,11 @@
     font-size: 12px;
     color: #999;
     margin-right: 60px; 
-}
+} */
 
 /* Styling for delete icon */
-.delete-icon {
+/* .delete-icon {
     cursor: pointer;
     position: absolute; 
     right: 10px; 
-}
+} */

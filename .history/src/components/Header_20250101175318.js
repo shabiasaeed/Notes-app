@@ -1,7 +1,7 @@
 import React from 'react';
+import './Header.css';
+import addButton from '../assets/add-button.png';
 import { FiSearch } from 'react-icons/fi';
-import { FaPlus } from 'react-icons/fa';
-
 
 // Component to handle the display of the application's header section
 const Header = ({ setSearchNotes }) => {
@@ -9,11 +9,13 @@ const Header = ({ setSearchNotes }) => {
     <header className="p-5 bg-white flex flex-col items-center shadow-md">
       <div className="flex items-center justify-between w-full max-w-4xl">
         <h1 className="text-4xl font-bold text-black">Notes</h1>
-        <FaPlus className="w-8 h-8 cursor-pointer"/>
+        <button className="add-button">
+          <img src={addButton} alt="Add"/>
+        </button>
       </div>
-      <div className="flex items-center w-full max-w-4xl mt-4">
-        <FiSearch className="w-6 h-6 text-gray-400 mr-3" />
-        <input type="text" placeholder="Search through your Notes" className="flex-grow border-none outline-none p-2 text-lg italic placeholder-gray-400" onChange={(e) => setSearchNotes(e.target.value)}/>
+      <div className="search-bar">
+        <FiSearch className="search-icon" />
+        <input type="text" placeholder="Search through your Notes" className="search-text" onChange={(e) => setSearchNotes(e.target.value)}/>
       </div>
     </header>
   );

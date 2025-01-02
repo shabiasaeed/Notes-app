@@ -1,6 +1,8 @@
 import React from 'react';
+import './Header.css';
+import addButton from '../assets/add-button.png';
 import { FiSearch } from 'react-icons/fi';
-import { FaPlus } from 'react-icons/fa';
+import { Faplus } from 'react-icons/fa';
 
 
 // Component to handle the display of the application's header section

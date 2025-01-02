@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Note.css';
 import { FiTrash } from 'react-icons/fi'; 
 import { FaThumbtack } from 'react-icons/fa'; 
 import { TbPinned } from 'react-icons/tb'; 

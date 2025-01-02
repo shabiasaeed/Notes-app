@@ -46,15 +46,13 @@ function App() {
   const sortedNotes = filteredNotes.sort((a, b) => b.pinned - a.pinned);
 
   return (
-    <div>
+    <div className="bg-gray-100 min-h-screen flex flex-col items-center">
       <Header setSearchNotes={setSearchNotes}/>
       <main className="p-2 relative flex flex-col items-center font-sans">
         <img src={backgroundInk} alt="Ink Element" className="fixed top-2/3 right-2/3 transform -translate-x-1/2 z-[-1] w-26"/>
-        <div className="w-full max-w-4xl mt-8 grid grid-cols-1 gap-4">
-          {sortedNotes.map((note, index) => (
-            <Note key={index} title={note.title} author={note.author} time={note.time} pinned={note.pinned} onDelete={handleDelete} onPinToggle={handlePinToggle}/>
-          ))}
-        </div>
+        {sortedNotes.map((note, index) => (
+          <Note key={index} title={note.title} author={note.author} time={note.time} pinned={note.pinned} onDelete={handleDelete} onPinToggle={handlePinToggle}/>
+        ))}
       </main>
     </div>
   );
