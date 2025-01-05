@@ -9,10 +9,8 @@ const Header = ({ setSearchNotes }) => {
   return (
     <header className="p-5 bg-white flex flex-col items-center shadow-md">
       <div className="flex items-center justify-between w-full max-w-4xl">
-        <div className="flex items-center">
-          <img src={Logo} alt="Logo" className="w-14 h-auto"/>
-          <h1 className="text-4xl font-bold text-black ml-4">Notes</h1>
-        </div>
+        {/* <img src={Logo} alt="Logo" className="w-16 h-auto"/> */}
+        <h1 className="text-4xl font-bold text-black">Notes</h1>
         <FaPlus className="w-8 h-8 cursor-pointer text-[#912338]"/>
       </div>
       <div className="flex items-center w-full max-w-4xl mt-4">
