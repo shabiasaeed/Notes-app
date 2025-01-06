@@ -19,7 +19,7 @@ function App() {
       title: "Movies/Shows to Watch",
       author: "Mick Zomnir",
       date: "yesterday",
-      content: "Must-watch films and TV shows, including Inception, Parasite, and Stranger Things.",
+      content: "hello texting",
       pinned: false
     },
     {

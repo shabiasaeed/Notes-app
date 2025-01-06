@@ -12,21 +12,21 @@ function App() {
       title: "Brainstorming Ideas for Campaign",
       author: "Roger Craig and Shakeel Avadhany",
       date: "2 mins ago",
-      content: "Focus on engaging the audience with themes of sustainability, empowerment, and humor. Use influencers and user-generated content to boost brand awareness.",
+      content: "hello texting",
       pinned: true
     },
     {
       title: "Movies/Shows to Watch",
       author: "Mick Zomnir",
       date: "yesterday",
-      content: "Must-watch films and TV shows, including Inception, Parasite, and Stranger Things.",
+      content: "hello texting",
       pinned: false
     },
     {
       title: "A Complete List of Books I Want to Read Before the End of the Year",
       author: "No Collaborators",
       date: "a week ago",
-      content: "Books to read include 'Atomic Habits,' 'Sapiens,' and 'Educated.'",
+      content: "hello texting",
       pinned: false
     }
 ]);

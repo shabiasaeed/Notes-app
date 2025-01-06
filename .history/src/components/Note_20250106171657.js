@@ -7,7 +7,8 @@ import { TbUserPlus } from 'react-icons/tb';
 //Component to handle the display of the note's section
 const Note = ({ title, author, date, content, pinned, onDelete, onPinToggle }) => {
   const [isHovered, setIsHovered] = useState(false); //State for checking whether the note is hovered
-  const [isExpanded, setIsExpanded] = useState(false); //State for checking whether the note is expanded
+  const [isExpanded, setIsExpanded] = useState(false);
+  
 
   return (
     <div className={`p-5 rounded-lg bg-white shadow-md hover:shadow-lg flex flex-col gap-2 cursor-pointer w-full transition-all duration-300 ${

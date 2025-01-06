@@ -5,13 +5,12 @@ import { TbPinned } from 'react-icons/tb';
 import { TbUserPlus } from 'react-icons/tb'; 
 
 //Component to handle the display of the note's section
-const Note = ({ title, author, date, content, pinned, onDelete, onPinToggle }) => {
+const Note = ({ title, author, date, pinned, onDelete, onPinToggle }) => {
   const [isHovered, setIsHovered] = useState(false); //State for checking whether the note is hovered
-  const [isExpanded, setIsExpanded] = useState(false); //State for checking whether the note is expanded
+  
 
   return (
-    <div className={`p-5 rounded-lg bg-white shadow-md hover:shadow-lg flex flex-col gap-2 cursor-pointer w-full transition-all duration-300 ${
-        isExpanded ? 'h-auto' : 'h-[100px]'}`}  onMouseEnter={() => {setIsHovered(true); setIsExpanded(true); }} onMouseLeave={() => {setIsHovered(false); setIsExpanded(false); }}>
+    <div className="p-5 rounded-lg bg-white shadow-md hover:shadow-lg flex flex-col gap-2 cursor-pointer w-full" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
       <div className="flex items-center justify-between">
         <div className="flex items-center">
           {pinned ? <FaThumbtack className="w-5 h-5 cursor-pointer" onClick={() => onPinToggle(title)} /> : isHovered && <TbPinned className="w-5 h-5 cursor-pointer" onClick={() => onPinToggle(title)} />}
@@ -24,7 +23,6 @@ const Note = ({ title, author, date, content, pinned, onDelete, onPinToggle }) =
         <p>{author}</p>
         <span className="ml-auto">{date}</span>
       </div>
-      {isExpanded && (<p className="mt-2 text-sm text-gray-700">{content}</p>)}
     </div>
   );
 };

@@ -7,33 +7,26 @@ import backgroundInk from './assets/ink-background-element.png';
 //Component to handle the rendering of the header and note compnents
 function App() {
   // Displaying few static notes 
-  const [notes, notesList] = useState([
-    {
-      title: "Brainstorming Ideas for Campaign",
-      author: "Roger Craig and Shakeel Avadhany",
-      date: "2 mins ago",
-      content: "Focus on engaging the audience with themes of sustainability, empowerment, and humor. Use influencers and user-generated content to boost brand awareness.",
-      pinned: true
-    },
-    {
-      title: "Movies/Shows to Watch",
-      author: "Mick Zomnir",
-      date: "yesterday",
-      content: "Must-watch films and TV shows, including Inception, Parasite, and Stranger Things.",
-      pinned: false
-    },
-    {
-      title: "A Complete List of Books I Want to Read Before the End of the Year",
-      author: "No Collaborators",
-      date: "a week ago",
-      content: "Books to read include 'Atomic Habits,' 'Sapiens,' and 'Educated.'",
-      pinned: false
-    }
-]);
-
-  function handleCreate(newNote){
-    notesList([...notes, newNote])
-  }
+  const [notes, notesList] = useState([]);
+    // {
+    //   title: "Brainstorming Ideas for Campaign",
+    //   author: "Roger Craig and Shakeel Avadhany",
+    //   time: "2 mins ago",
+    //   pinned: true
+    // },
+    // {
+    //   title: "Movies/Shows to Watch",
+    //   author: "Mick Zomnir",
+    //   time: "yesterday",
+    //   pinned: false
+    // },
+    // {
+    //   title: "A Complete List of Books I Want to Read Before the End of the Year",
+    //   author: "No Collaborators",
+    //   time: "a week ago",
+    //   pinned: false
+    // }
+// ]);
 
   function handleDelete(title){
     notesList(notes.filter( note => note.title !== title))
@@ -54,12 +47,12 @@ function App() {
 
   return (
     <div>
-      <Header setSearchNotes={setSearchNotes} onAddNote={handleCreate}/>
+      <Header setSearchNotes={setSearchNotes}/>
       <main className="p-2 relative flex flex-col items-center font-sans">
         <img src={backgroundInk} alt="Ink Element" className="fixed top-2/3 right-2/3 transform -translate-x-1/2 z-[-1] w-26"/>
         <div className="w-full max-w-4xl mt-8 grid grid-cols-1 gap-4">
           {sortedNotes.map((note, index) => (
-            <Note key={index} title={note.title} author={note.author} date={note.date} content={note.content} pinned={note.pinned} onDelete={handleDelete} onPinToggle={handlePinToggle}/>
+            <Note key={index} title={note.title} author={note.author} time={note.time} pinned={note.pinned} onDelete={handleDelete} onPinToggle={handlePinToggle}/>
           ))}
         </div>
       </main>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Logo from '../assets/Logo.png';
 import { FiSearch } from 'react-icons/fi';
 import { FaPlus } from 'react-icons/fa';
@@ -6,7 +6,7 @@ import CreateNote from './CreateNote';
 
 
 // Component to handle the display of the application's header section
-const Header = ({ setSearchNotes, onAddNote }) => {
+const Header = ({ setSearchNotes }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Logo from '../assets/Logo.png';
 import { FiSearch } from 'react-icons/fi';
 import { FaPlus } from 'react-icons/fa';
